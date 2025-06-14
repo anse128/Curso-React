@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom/client';
+import { HelloWorldApp } from './HelloWorldApp';
 
 
-function App() {
-    return (<h1>Holaaaa!!</h1>);
-}
+HelloWorldApp
+
 
 ReactDom.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <App/>
+        <HelloWorldApp/>
     </React.StrictMode>
 )
