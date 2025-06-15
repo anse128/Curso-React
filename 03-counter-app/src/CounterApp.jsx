@@ -1,21 +1,20 @@
-import React from 'react'
+import { useState } from 'react'
 
 export const CounterApp = ({ title, value }) => {
-    
-    const handleAdd = (event, newValue) =>{
+
+    const [counter, setCounter] = useState(0)
+
+    const handleAdd = () => {
         // console.log(newValue)
         // console.log(event)
-        console.log('+1')
-        value = 1000
-        console.log(value)
+        // setCounter((c) => c + 1);
+        setCounter(counter+1);
     }
 
     return (
         <>
             <h1>{title}</h1>
-            <h2>{value}</h2>
-            {/* <button onClick={(event) => handleAdd(event)}> */}
-            {/* <button onClick={(event) => handleAdd(event, 'hola')}> //nuevo valor */}
+            <h2>{counter}</h2>
             <button onClick={handleAdd}>
                 +1
             </button>
