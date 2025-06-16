@@ -10,14 +10,15 @@
 //     return a + b;
 // }
 
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
-export const FirstApp = ({
-    name = 'Sebastián Escobar',
-    subTitle = 'No hay subtítulo',
-    title = 'No hay título'
-}) => {
+// export const FirstApp = ({
+//     name = 'Sebastián Escobar',
+//     subTitle = 'No hay subtítulo',
+//     title = 'No hay título'
+// }) => {
 
+export const FirstApp = ({name,subTitle,title}) => {
     return (
         <>
             <h1>{title}</h1>
@@ -32,9 +33,10 @@ export const FirstApp = ({
 // Los proptypes están deprecados
 
 //Se recomienda usar typescript
-FirstApp.PropTypes = {
-    title: PropTypes.string.isRequired,
-    subTitle: PropTypes.number.isRequired
+FirstApp.prototype = {
+    name: propTypes.string.isRequired,
+    subTitle: propTypes.number.isRequired,
+    title: propTypes.string.isRequired,
 }
 
 //Para los defaul se recomienda hacerlo como se hizo arriba en la función
